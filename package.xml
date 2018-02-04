@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <name>llsf_msgs</name>
+  <version>0.0.1</version>
+  <description>Logistics League Protobuf Messages Package. Ported from AtWork refbox comm</description>
+
+  <maintainer email="todo@todo.de">TODO</maintainer>
+
+  <license>GPLv2</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>
