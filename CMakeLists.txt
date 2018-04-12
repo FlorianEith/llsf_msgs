@@ -8,7 +8,6 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 
-#set(REFBOX_ROOT_DIR ${PROJECT_SOURCE_DIR}/../../../../llsf-refbox)
 set(REFBOX_ROOT_DIR /home/faps/llsf-refbox)
 set(LLSF_MSGS_DIR "${REFBOX_ROOT_DIR}/src/msgs")
 
@@ -17,8 +16,8 @@ IF(EXISTS "${REFBOX_ROOT_DIR}" AND IS_DIRECTORY "${REFBOX_ROOT_DIR}")
 ELSE()
   MESSAGE(FATAL_ERROR "\n"
      "Refbox directory " ${REFBOX_ROOT_DIR} " doesn't exist.\n"
-     "Check if the submodule has been initialized.\n"
-     "Please see README in \"atwork_refbox_comm\"\n"
+     "Check if the prerequesites have been initialized.\n"
+     "Please see README in \"llsf_msgs\"\n"
   )
 ENDIF(EXISTS "${REFBOX_ROOT_DIR}" AND IS_DIRECTORY "${REFBOX_ROOT_DIR}")
 
@@ -30,7 +29,7 @@ ELSE()
   MESSAGE(FATAL_ERROR "\n"
      "Protobuf msgs " ${LOGISTIGS_MSGS_DIR} " directory doesn't exist.\n"
      "Check if the submodule has been initialized.\n"
-     "Please see README in \"atwork_refbox_comm\"\n"
+     "Please see README in \"llsf_msgs\"\n"
   )
 ENDIF(EXISTS "${LLSF_MSGS_DIR}" AND IS_DIRECTORY "${LLSF_MSGS_DIR}")
 
@@ -81,7 +80,7 @@ install(TARGETS llsf_msgs
 ## else: using cmake
 #else()
 #  install(
-#    TARGETS atwork_pb_msgs
+#    TARGETS rcll_pb_msgs
 #    LIBRARY DESTINATION lib
 #  )
 #  install(
