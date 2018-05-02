@@ -20,23 +20,22 @@ The following ROS packages are required to run this package:
 
 Install the required software, create a catkin workspace (see [create ROS catkin workspace](http://wiki.ros.org/catkin/Tutorials/create_a_workspace)) and download the required ROS packages into the workspaces src folder.
 
-Adjust the llsf_msgs and protobuf_comm packages to your system. Therefore set the REFBOX_ROOT_DIR path variable in the CMakeLists.txt file to your refbox installation path.
+Adjust the llsf_msgs packages to your system. Therefore set the REFBOX_ROOT_DIR path variable in the CMakeLists.txt file to your refbox installation path.
 ```
 (in CMakeLists.txt)
 ...
 set(REFBOX_ROOT_DIR /home/username/llsf-refbox)
 ...
 ```
-Restart your system. For some reasons the refbox header files are just found by ROS build process after a restart of the system.
-
 Build your catkin workspace.
 
 ```
 cd ~/catkin_ws
 catkin_make
 ```
-The RCLL protobuf messages can now be included as header files, e.g:
+The RCLL protobuf headers and message headers can now be included as header files, e.g:
 ```
+#include <protobuf_comm/client.h>
 #include <llsf_msgs/Time.pb.h>
 ```
 
