@@ -8,7 +8,7 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 
-set(REFBOX_ROOT_DIR /home/faps/llsf-refbox)
+set(REFBOX_ROOT_DIR /root/rcll-refbox)
 set(LLSF_MSGS_DIR "${REFBOX_ROOT_DIR}/src/msgs")
 
 IF(EXISTS "${REFBOX_ROOT_DIR}" AND IS_DIRECTORY "${REFBOX_ROOT_DIR}")
